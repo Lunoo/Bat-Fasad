@@ -1,1 +1,155 @@
 @import "reset"
+
+// FONT
+@font-face
+	font-family: 'BebasNeue'
+	src: url('../fonts/BebasNeue Bold.otf') format('opentype')
+	font-weight: bold
+	font-style: normal
+
+// UTILITY
+
+.wrapper
+	max-width: 1180px
+	margin: 0 auto
+
+a
+	text-decoration: none
+
+.button
+	position: relative
+	display: block
+	height: 50px
+	line-height: 50px
+	background: #ff5a00
+	box-shadow: inset -150px 0 70px 0 #ff9000
+	font-weight: bold
+	text-align: center
+	text-transform: uppercase
+	text-shadow: 0px 3px 0px #ff0700
+	color: #fff
+	transition: box-shadow 1s ease
+	&:hover
+		box-shadow: inset 150px 0 70px 0 #ff9000
+		transition: box-shadow 1s ease
+
+// GENERAL
+
+body
+	font-family: 'Roboto', sans-serif
+
+header
+	height: 100px
+	background: #1a1d7c
+
+	.logo
+		display: block
+		width: 240px
+		height: 70px
+		float: left
+		margin-top: 16px
+		background: url('../img/logo.png') no-repeat
+	.nav
+		float: left
+		margin: 42px 0 0 35px
+
+		li
+			float: left
+			padding: 0 23px
+			border-left: 1px solid #fff
+			&:first-child
+				border-left: none
+				padding-left: 0
+		a
+			position: relative
+			top: -1px
+			color: #fff
+			font-weight: 300
+			&:hover
+				text-decoration: underline
+	.contacts
+		float: right
+		margin-top: 5px
+		width: 185px
+		a
+			font-size: 18px
+			font-weight: bold
+			color: #fff
+		.button
+			margin-top: 4px
+			height: 40px
+			line-height: 40px
+			font-size: 14px
+			box-shadow: inset -90px 0 45px 0 #ff9000
+			&:hover
+				box-shadow: inset 90px 0 45px 0 #ff9000
+
+.section-1
+	background: url('../img/section-1.jpg') no-repeat
+	background-size: contain
+	padding-top: 55px
+	height: 1000px
+	h1
+		text-align: center
+		font-weight: bold
+		font-size: 28px
+		color: #1a1d7c
+		text-transform: uppercase
+		em
+			display: block
+			font-family: 'BebasNeue', sans-serif
+			font-weight: bold
+			font-size: 92px
+	.form
+		margin: 120px auto 0
+		position: relative
+		width: 440px
+		height: 330px
+		background: url('../img/form-border.png') no-repeat
+		background-size: contain
+		&, & *
+			box-sizing: border-box
+		form
+			position: absolute
+			top: -6px
+			left: 20px
+			width: 400px
+			height: 345px
+			padding: 30px 25px
+			border: 17px solid #fff
+			background: rgba(26, 29, 124, .5)
+			transform: skewX(-7deg)
+		.form-inner
+			transform: skewX(7deg)
+			width: 300px
+			text-align: center
+		h3
+			font-size: 24px
+			color: #fff
+			font-weight: 300
+			margin-bottom: 20px
+			letter-spacing: .9px
+			span
+				font-size: 42px
+				font-family: 'BebasNeue', sans-serif
+				font-weight: bold
+				font-weight: 600
+		input
+			border: none
+			width: 100%
+			height: 50px
+			margin-bottom: 10px
+			font-size: 16px
+		[type="text"]
+			color: #a1a1a1
+			font-style: italic
+			font-weight: 300
+			padding: 0 23px
+			font-size: 18px
+		[type="submit"]
+			cursor: pointer
+			border-bottom: 2px solid red
+
+
+
+
