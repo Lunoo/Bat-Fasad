@@ -15,6 +15,9 @@
 
 a
 	text-decoration: none
+sup
+	vertical-align: super
+	font-size: .6em
 
 .button
 	position: relative
@@ -22,16 +25,64 @@ a
 	height: 50px
 	line-height: 50px
 	background: #ff5a00
-	box-shadow: inset -150px 0 70px 0 #ff9000
+	//box-shadow: inset -150px 0 70px 0 #ff9000
+	background: linear-gradient(to bottom, #ff9000, #ff5d00)
 	font-weight: bold
 	text-align: center
 	text-transform: uppercase
 	text-shadow: 0px 3px 0px #ff0700
 	color: #fff
-	transition: box-shadow 1s ease
+	//transition: box-shadow 1s ease
 	&:hover
-		box-shadow: inset 150px 0 70px 0 #ff9000
-		transition: box-shadow 1s ease
+		top: 1px
+		background: linear-gradient(to top, #ff9000, #ff5d00)
+		//box-shadow: inset 150px 0 70px 0 #ff9000
+		//transition: box-shadow 1s ease
+.triangle
+	position: absolute
+	bottom: 30px
+	left: 0
+	right: 0
+	width: 128px
+	height: 128px
+	overflow: hidden
+	margin: auto
+	transform: rotate(45deg)
+	z-index: 1
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		height: 150px
+		width: 150px
+		transform: rotate(-45deg)
+.down
+	position: absolute
+	left: 0
+	right: 0
+	width: 30px
+	height: 50px
+	margin: auto
+	background: url('../img/icons/scroll-white.png') no-repeat
+	z-index: 2
+	cursor: pointer
+	border-radius: 20px/20px
+	transition: box-shadow .5s
+	&:hover
+		box-shadow: 0 0 5px 1px #fff
+		transition: box-shadow .5s
+.section-title
+	text-align: center
+	font-weight: 300
+	font-size: 28px
+	color: #1a1d7c
+	text-transform: uppercase
+	em
+		display: block
+		font-family: 'BebasNeue', sans-serif
+		font-weight: bold
+		font-size: 92px
 
 // GENERAL
 
@@ -80,26 +131,24 @@ header
 			height: 40px
 			line-height: 40px
 			font-size: 14px
-			box-shadow: inset -90px 0 45px 0 #ff9000
-			&:hover
-				box-shadow: inset 90px 0 45px 0 #ff9000
+			// box-shadow: inset -90px 0 45px 0 #ff9000
+			// &:hover
+			// 	box-shadow: inset 90px 0 45px 0 #ff9000
 
+section[class*="section-"]
+	position: relative
 .section-1
-	background: url('../img/section-1.jpg') no-repeat
-	background-size: contain
+	background: url('../img/section-1.jpg') center top no-repeat
 	padding-top: 55px
 	height: 1000px
-	h1
-		text-align: center
+	.wrapper
+		position: relative
+		max-width: 1040px
+	.section-title
 		font-weight: bold
-		font-size: 28px
-		color: #1a1d7c
-		text-transform: uppercase
-		em
-			display: block
-			font-family: 'BebasNeue', sans-serif
-			font-weight: bold
-			font-size: 92px
+	.triangle
+		&:after
+			background: url('../img/section-1.jpg') center bottom no-repeat
 	.form
 		margin: 120px auto 0
 		position: relative
@@ -149,7 +198,231 @@ header
 		[type="submit"]
 			cursor: pointer
 			border-bottom: 2px solid red
+	.price
+		box-sizing: border-box
+		float: left
+		width: 175px
+		height: 175px
+		border-radius: 50%
+		background: rgba(26, 29, 124, .7)
+		color: #fff
+		font-weight: bold
+		text-align: center
+		padding-top: 40px
+		margin-top: 90px
+		text-transform: uppercase
+		letter-spacing: 2px
+		span
+			display: block
+			font-family: 'BebasNeue', sans-serif
+			font-size: 72px
+			margin-top: 10px
+	.download
+		position: relative
+		float: right
+		margin-top: 90px
+		width: 175px
+		height: 175px
+		border-radius: 50%
+		background: rgba(26, 29, 124, .7)
+		&:before
+			content: ''
+			position: absolute
+			top: 18px
+			left: 0
+			right: 0
+			margin: auto
+			height: 35px
+			width: 31px
+			background: url('../img/icons/pdf.png') no-repeat
+		a
+			margin-top: 65px
+			margin-left: -60px
+			display: block
+			width: 300px
+			height: 50px
+			line-height: 50px
+			text-align: center
+			text-transform: uppercase
+			color: #fff
+			font-weight: bold
+			background: #1a1d7c
+			transition: background .5s ease
+			&:hover
+				background: #282b9c
+				transition: background .5s ease
+	.more
+		display: block
+		margin: 80px auto 0
+		width: 300px
+		height: 55px
+		line-height: 55px
+		text-align: center
+		color: #1a1d7c
+		font-weight: bold
+		text-transform: uppercase
+		background: #fff
+		box-shadow: 0px 10px 10px 0px rgba(7, 9, 81, 0.5)
+		&:hover
+			box-shadow: 0px 10px 12px 1px rgba(7, 9, 81, 0.6)
+			animation: pulse 1s infinite
+	@keyframes pulse
+		0%, 100%
+			box-shadow: 0px 10px 10px 0px rgba(7, 9, 81, 0.5)
+		50%
+			box-shadow: 0px 10px 11px 1px rgba(7, 9, 81, 0.6)
+	.variant
+		position: absolute
+		bottom: 0px
+		left: 10px
+		font-size: 18px
+		color: #fff
+		background: rgba(26, 29, 124, .7)
+		padding: 5px 5px 3px 5px
+		span
+			position: absolute
+			display: inline-block
+			width: 245px
+			padding: 3px 5px 5px 5px
+			background: rgba(26, 29, 124, .7)
+			bottom: -26px
+			left: 0
+		i
+			position: absolute
+			top: -30px
+			right: -150px
+			width: 125px
+			height: 1px
+			background: #fff
+			transform: rotate(-35deg)
+			&:before, &:after
+				position: absolute
+				content: ''
+				height: 10px
+				width: 10px
+				border-radius: 50%
+				background: #fff
+			&:before
+				top: -5px
+				left: -5px
+			&:after
+				top: -5px
+				right: -5px
+	.down
+		bottom: 195px
 
+.section-2
+	background: url('../img/section-2.jpg') center top no-repeat
+	height: 1380px
+	margin-top: -55px
+	padding-top: 100px
+	.section-title
+		color: #fff
+		font-size: 24px
+		margin-bottom: 60px
+		em
+			font-size: 100px
+	.triangle
+		bottom: 58px
+		&:after
+			background: url('../img/section-2.jpg') center bottom no-repeat
+	.advantage
+		position: relative
+		width: 555px
+		height: 170px
+		float: left
+		background: rgba(26, 29, 124, .8)
+		color: #fff
+		margin: 0 32px 32px 0
+		padding: 10px 30px 10px 130px
+		box-sizing: border-box
+		outline: rgba(26, 29, 124, .8) solid 8px
+		outline-offset: 1px
+		.title
+			font-size: 28px
+			font-family: 'BebasNeue', sans-serif
+			font-weight: bold
+			margin-bottom: 10px
+			text-transform: uppercase
+		p
+			line-height: 1.4
+			font-weight: 300
+		.text-wrap
+			position: relative
+			top: 50%
+			transform: translateY(-50%)
+		&:before
+			position: absolute
+			top: 30%
+			left: 25px
+			content: ''
+			height: 70px
+			width: 70px
+			background: #fff
 
+		@for $i from 1 to 11
+			&:nth-child(#{$i}):before
+				background: url('../img/icons/advantages-#{$i}.png') center no-repeat
+			
+	.down
+		bottom: 100px
 
+.section-3
+	background: url('../img/section-3.jpg') center top no-repeat
+	padding-top: 130px
+	height: 808px
+	margin-top: -101px
+	color: #fff
+	
+	.contains
+		float: left
+		width: 300px
+		padding: 42px 0 30px
+		background: rgba(26, 29, 124, .8)
+		box-shadow: 0px 10px 10px 0px rgba(7, 9, 81, 0.5)
+		text-align: center
+		.head
+			font-size: 32px
+			text-transform: uppercase
+			font-family: 'BebasNeue', sans-serif
+
+		li
+			margin: 80px auto 0
+			width: 220px
+			display: block
+			font-size: 20px
+			line-height: 1.3
+			position: relative
+			&:before
+				position: absolute
+				top: -45px
+				left: 0
+				right: 0
+				margin: auto
+				content: ''
+				width: 37px
+				height: 37px
+				background: url('../img/icons/ok.png') no-repeat
+	.section-title
+		color: #fff
+		font-size: 24px
+		margin: 0px 0 50px 100px
+		text-align: left
+		em
+			text-indent: -70px
+			font-size: 100px
+	p
+		font-weight: 300
+		margin-bottom: 35px
+		line-height: 1.5
+		&.bolder
+			font-weight: 400
+	.info
+		margin-left: 322px
+	.button
+		border-bottom: 2px solid red
+		width: 300px
+		margin: 50px auto 0
+	.down
+		bottom: 140px
 
