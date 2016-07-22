@@ -458,20 +458,9 @@ section[class*="section-"]
 		width: 35%
 		position: absolute
 
-.section-5
-	height: 1140px
-	background: url('../img/section-5.png') center top no-repeat
-	padding-top: 150px
-
-	.triangle
-		bottom: -40px
-		&:after
-			background: url('../img/section-5.png') center bottom no-repeat
-
+.section-5, .section-6
 	.wrapper
 		text-align: center
-	.section-title
-		margin-bottom: 55px
 	input
 		display: none
 	label
@@ -516,12 +505,96 @@ section[class*="section-"]
 			
 	.tab
 		display: none
-		padding: 5px 10px
 		clear: left
+		margin-top: 35px
 
 	input:nth-of-type(1):checked ~ .tab:nth-of-type(1),
 	input:nth-of-type(2):checked ~ .tab:nth-of-type(2)
 		display: block
+
+.section-5
+	height: 990px
+	background: url('../img/section-5.png') center top no-repeat
+	padding-top: 150px
+
+	.triangle
+		bottom: -40px
+		&:after
+			background: url('../img/section-5.png') center bottom no-repeat
+
+	.section-title
+		margin-bottom: 55px
+
+	.size
+		width: 220px
+		float: right
+		padding-top: 30px
+
+		figure
+			position: relative
+			float: right
+			img
+				max-width: 100%
+			&.small
+				width: 16px
+				height: 250px
+				margin-right: 40px
+
+				.line-horizontal
+					text-indent: -10px
+
+			&.big
+				width: 125px
+				height: 250px
+
+
+		[class*="line"]
+			border-bottom: 1px solid #757575
+			color: #757575
+			position: absolute
+			font-size: 18px
+
+			&:after, &:before
+				position: absolute
+				content: ''
+				width: 4px
+				height: 7px
+				bottom: -4px
+			&:before
+				background: url('../img/icons/line-left.png') no-repeat
+				left: -4px
+			&:after
+				background: url('../img/icons/line-right.png') no-repeat
+				right: -4px
+		.line-horizontal
+			width: calc(100% - 8px)
+			top: -28px
+			left: 4px
+			padding-bottom: 2px
+		.line-vertival
+			transform: rotate(-90deg)
+			width: 234px
+			top: 115px
+			left: -135px
+			padding-bottom: 2px
+	.assortments
+		margin-right: 220px
+		border-right: 5px solid #ebebeb
+		padding-right: 20px
+		overflow: hidden
+	.assortment-example
+		float: left
+		margin: 0 17px 20px 0
+		width: 220px
+		height: 100px
+		&:nth-child(4n)
+			margin-right: 0
+		img
+			max-width: 100%
+			margin-bottom: -3px
+		span
+			font-size: 12px
+			color: #757575
 
 .section-6
 	height: 1038px
@@ -532,3 +605,111 @@ section[class*="section-"]
 		bottom: -35px
 		&:after
 			background: url('../img/section-6.png') center bottom no-repeat
+
+	label
+		background: #fff
+		height: 62px
+		&:after
+			height: calc(100% - 6px)
+	input:checked + label
+		background: #e5e5e5
+		cursor: default
+		i:before, i:after
+			position: absolute
+			left: 0
+			right: 0
+			content: ''
+			margin: auto
+			z-index: 1
+			transform: rotate(45deg)
+		i:after
+			bottom: -6px
+			height: 15px
+			width: 15px
+			border-bottom: 1px dashed #c8cccd
+			border-right: 1px dashed #c8cccd
+		i:before
+			bottom: -8px
+			height: 18px
+			width: 18px
+			background: #e5e5e5
+		&:after
+			border: 1px dashed #c8cccd
+	.tab
+		input
+			display: none
+		label
+			//width: 168px
+			width: auto
+			height: 47px
+			line-height: 47px
+			margin: 0
+			margin-left: -4px
+			text-transform: none
+			background: none
+			border: 1px solid transparent
+			&:after
+				display: none
+
+		input[name="tab3"]+label
+			padding: 0 63px
+		input[name="tab4"]+label
+			padding: 0 33px
+		input:checked + label
+			background: #fff
+			border: 1px solid #e6e6e6
+			border-bottom: none
+				
+
+		input:nth-of-type(1):checked ~ .tab:nth-of-type(1),
+		input:nth-of-type(2):checked ~ .tab:nth-of-type(2),
+		input:nth-of-type(3):checked ~ .tab:nth-of-type(3),
+		input:nth-of-type(4):checked ~ .tab:nth-of-type(4)
+			display: block
+
+		.tab
+			display: none
+			clear: left
+			margin-top: -2px
+			background: #fff
+			border-top: 1px solid #e6e6e6
+			padding: 32px 70px 60px
+			text-align: left
+			color: #757575
+			overflow: hidden
+
+			img.des
+				float: left
+				margin-right: 25px
+			.title
+				font-size: 24px
+				font-weight: 400
+			p
+				margin: 20px 0 36px
+				line-height: 1.5
+			em
+				font-weight: bold
+			.examples
+				clear: left
+				width: 880px
+				margin: 0 auto
+				padding-top: 40px
+			.group-name
+				font-size: 18px
+				font-weight: 300
+				border-bottom: 1px solid #757575
+				padding-bottom: 8px
+				margin-bottom: 17px
+			.assortment-example
+				float: left
+				text-align: center
+				width: 165px
+				height: 75px
+				margin: 0 13px 19px 0
+				span
+					font-size: 10px
+				&:nth-child(5n + 1)
+					margin-right: 0
+				img
+					max-width: 100%
+					margin-bottom: -3px
