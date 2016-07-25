@@ -11,6 +11,7 @@
 
 .wrapper
 	max-width: 1180px
+	//min-width: 1280px
 	margin: 0 auto
 
 a
@@ -92,7 +93,6 @@ sup
 
 body
 	font-family: 'Roboto', sans-serif
-	height: 15000px
 
 header
 	height: 100px
@@ -333,7 +333,7 @@ section[class*="section-"]
 			background: url('../img/section-2.jpg') center bottom no-repeat
 	.advantage
 		position: relative
-		width: 555px
+		width: 572px
 		height: 170px
 		float: left
 		background: rgba(26, 29, 124, .8)
@@ -343,6 +343,8 @@ section[class*="section-"]
 		box-sizing: border-box
 		outline: rgba(26, 29, 124, .8) solid 8px
 		outline-offset: 1px
+		&:nth-child(even)
+			margin-right: 0
 		.title
 			font-size: 28px
 			font-family: 'BebasNeue', sans-serif
@@ -578,7 +580,6 @@ section[class*="section-"]
 			left: -135px
 			padding-bottom: 2px
 	.assortments
-		margin-right: 220px
 		border-right: 5px solid #ebebeb
 		padding-right: 20px
 		overflow: hidden
@@ -639,7 +640,6 @@ section[class*="section-"]
 		input
 			display: none
 		label
-			//width: 168px
 			width: auto
 			height: 47px
 			line-height: 47px
@@ -713,3 +713,166 @@ section[class*="section-"]
 				img
 					max-width: 100%
 					margin-bottom: -3px
+.section-7
+	height: 1230px
+	background: #e5e5e5 url('../img/section-7.png') center 150px no-repeat
+	padding-top: 120px
+
+	.triangle
+		bottom: -40px
+		&:after
+			background: url('../img/section-7.png') center -1110px no-repeat
+	.down
+		bottom: 35px
+
+	.section-title
+		margin-bottom: 60px
+
+	.reason
+		float: left
+		margin: 0 10px 15px 0
+		width: 550px
+		height: 215px
+		background: rgba(26,29,124,0.8)
+		line-height: 1.5
+		.value
+			float: left
+			width: 232px
+			height: 100%
+			background: #fff
+			text-align: center
+			margin-right: 18px
+			position: relative
+			span
+				display: block
+				width: 200px
+				font-weight: 600
+				margin: 115px auto 0
+			&:before
+				position: absolute
+				top: 35px
+				left: 0
+				right: 0
+				margin: auto
+				content: ''
+				width: 80px
+				height: 70px
+			&:after
+				position: absolute
+				top: 25px
+				right: -1px
+				height: calc(100% - 50px)
+				width: 2px
+				content: ''
+				background: rgba(26,29,124,0.8)
+				border-right: 1px solid #fff
+		@for $i from 1 to 11
+			&:nth-child(#{$i}) .value:before
+				background: url('../img/icons/panel-#{$i}.png') center no-repeat
+		.details
+			margin-left: 232px
+			font-weight: 300
+			color: #fff
+			position: relative
+			top: 50%
+			transform: translateY(-50%)
+		&:last-child
+			float: none
+			clear: left
+			margin: 10px auto
+
+.section-8
+	height: 960px
+	background: url('../img/section-6.png') center top no-repeat
+	padding-top: 120px
+
+	.triangle
+		bottom: -40px
+		&:after
+			background: url('../img/section-6.png') center -990px no-repeat
+	.down
+		bottom: 35px
+
+	.section-title
+		margin-bottom: 60px
+
+	.wrapper
+		max-width: 1270px
+
+	a
+		position: relative
+		width: 92px
+		height: 92px
+		float: left
+		margin: 0 15px 15px 0
+		&:nth-child(12n)
+			margin-right: 0
+		&:after
+			display: none
+			position: absolute
+			content: ''
+			top: 0
+			left: 0
+			height: 100%
+			width: 100%
+			background: rgba(26,29,124,0.8) url('../img/icons/eye.png') no-repeat center
+		&:hover:after
+			display: block
+
+		img
+			width: 100%
+			height: 100%
+
+
+footer
+	height: 550px
+	position: relative
+	iframe
+		height: 100%
+		width: 100%
+	.form
+		position: absolute
+		top: 100px
+		right: 400px
+		width: 370px
+		height: 370px
+		border: 7px solid #fff
+		background: rgba(26,29,124,0.8)
+		transform: skewX(-7deg)
+	.form-wrapper
+		transform: skewX(7deg)
+		padding: 25px 35px
+	.logo
+		display: block
+		width: 240px
+		height: 70px
+		margin: 16px auto 35px
+		background: url('../img/logo.png') no-repeat
+	.footer-info
+		width: 190px
+		margin: auto
+		a
+			margin-bottom: 30px
+			display: block
+		>*
+			color: #fff
+			position: relative
+			padding-left: 40px
+			&:before
+				position: absolute
+				content: ''
+				left: -5px
+				top: -10px
+				width: 35px
+				height: 35px
+				border-radius: 50%
+			&:nth-child(1):before
+				background: rgba(255, 255, 255, .25) url('../img/icons/footer-tel.png') no-repeat center
+			&:nth-child(2):before
+				background: rgba(255, 255, 255, .25) url('../img/icons/footer-mail.png') no-repeat center
+			&:nth-child(3):before
+				background: rgba(255, 255, 255, .25) url('../img/icons/footer-address.png') no-repeat center
+	.button
+		margin-top: 35px
+		border-bottom: 3px solid red
+
