@@ -16,16 +16,14 @@ $(function(){
 			}
 		}
 	});
-
+    $('.price, .download, .advantage, .reason, .section-4 .wrapper>div, .section-4 figure, .section-3 .wrapper, .section-6 .wrapper, .section-5 .wrapper, .section-8 .wrapper, footer .form').addClass('move');
     setTimeout(function(){
-    	$('.price, .download, .section-1 .section-title').addClass('animate');
+    	$('.price, .download').addClass('animate');
     }, 1000);
     var height = $(window).height();
     $(window).scroll(function(){
     	$this = $(this);
-        $('.advantage, .section-title, .reason, .section-4 .wrapper>div, .section-4 figure').each(function(i, item){
-        	// console.log($this.scrollTop() + height);
-        	// console.log($(item).offset().top)
+        $('.move').each(function(i, item){
         	if( $this.scrollTop() + height >  $(item).offset().top + 100){
         		$(item).addClass('animate');	
         	}
