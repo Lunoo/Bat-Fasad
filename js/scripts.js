@@ -4,7 +4,20 @@ $(function(){
         $top = $parent.next().offset().top;
         $('body,html').animate({scrollTop: $top}, 1000);
     })
-
+    $('.examples').each(function(i, item){
+        $(item).find('a').attr('rel', 'gal-'+i).fancybox({
+            openEffect : 'elastic',
+            closeEffect : 'elastic',
+            nextEffect : 'fade',
+            prevEffect : 'fade',
+            'loop': false,
+            helpers : {
+                title   : {
+                    type: 'inside'
+                }
+            }
+        });
+    })
     $('.gallery a').attr('rel', 'gallery').fancybox({
 		helpers	: {
 			title	: {
@@ -29,4 +42,5 @@ $(function(){
         	}
         });
     })
+    $('footer .button').fancybox();
 })

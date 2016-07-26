@@ -88,6 +88,10 @@ sup
 		margin-bottom: -8px
 		letter-spacing: 3px
 
+.fancybox-opened .fancybox-title
+	text-align: center
+	color: #000
+
 // ANIMATION
 .move
 	opacity: 0
@@ -109,7 +113,7 @@ sup
 		opacity: 1
 @keyframes slideInLeftHalf
 	from
-		transform: translate3d(-30%, 0, 0)
+		transform: translate3d(-25%, 0, 0)
 		opacity: 0
 	to
 		transform: translate3d(0, 0, 0)
@@ -117,7 +121,7 @@ sup
 
 @keyframes slideInRightHalf
 	from
-		transform: translate3d(30%, 0, 0)
+		transform: translate3d(25%, 0, 0)
 		opacity: 0
 	to
 		transform: translate3d(0, 0, 0)
@@ -563,6 +567,7 @@ header, footer, section[class*="section-"]
 	height: 616px
 	background: url('../img/section-4.jpg') center top no-repeat
 	padding-top: 195px
+	overflow: hidden
 
 	.triangle
 		bottom: -40px
@@ -578,6 +583,8 @@ header, footer, section[class*="section-"]
 		width: 48%
 		margin-top: -130px
 		margin-right: 100px
+		img
+			max-width: 150%
 		&.animate
 			animation: slideInRightLittle 1s
 			opacity: 1
@@ -731,9 +738,10 @@ header, footer, section[class*="section-"]
 			color: #757575
 
 .section-6
-	height: 1070px
-	background: url('../img/section-6.png') center top no-repeat
+	//height: 1070px
+	background: url('../img/section-6.jpg') center top
 	padding-top: 125px
+	padding-bottom: 120px
 
 	.section-title
 		margin-bottom: 30px
@@ -741,7 +749,7 @@ header, footer, section[class*="section-"]
 	.triangle
 		bottom: -35px
 		&:after
-			background: url('../img/section-6.png') center bottom no-repeat
+			background: url('../img/section-6.jpg') center bottom no-repeat
 
 	label
 		background: #fff
@@ -821,6 +829,7 @@ header, footer, section[class*="section-"]
 			img.des
 				float: left
 				margin-right: 17px
+				width: 340px
 			.title
 				margin-top: 20px
 				font-size: 24px
@@ -828,6 +837,7 @@ header, footer, section[class*="section-"]
 			p
 				margin: 15px 0 27px
 				line-height: 1.5
+				margin-left: 360px
 			em
 				font-weight: bold
 			.examples
@@ -847,10 +857,15 @@ header, footer, section[class*="section-"]
 				width: 165px
 				height: 75px
 				margin: 0 13px 19px 0
+				// margin: 0 10px 15px 0
+				// width: 100px
+				// height: 50px
 				span
 					font-size: 10px
 				&:nth-child(5n + 1)
 					margin-right: 0
+				// &:nth-child(8n + 1)
+				// 	margin-right: 0
 				img
 					max-width: 100%
 					margin-bottom: -3px
@@ -1051,3 +1066,22 @@ footer
 		margin-top: 45px
 		border-bottom: 3px solid red
 
+#order-phone
+	width: 400px
+	padding: 20px 10px
+	input
+		border: none
+		width: 100%
+		height: 50px
+		margin-bottom: 10px
+		font-size: 16px
+		box-sizing: border-box
+	[type="text"]
+		color: #a1a1a1
+		font-style: italic
+		font-weight: 300
+		padding: 0 23px
+		font-size: 18px
+	[type="submit"]
+		cursor: pointer
+		border-bottom: 2px solid red
